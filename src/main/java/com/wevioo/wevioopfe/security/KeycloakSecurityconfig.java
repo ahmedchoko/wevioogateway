@@ -1,5 +1,7 @@
 package com.wevioo.wevioopfe.security;
 
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -20,11 +22,6 @@ public class KeycloakSecurityconfig{
     CorsConfigurationSource corsConfigurationSource() {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration().applyPermitDefaultValues();
-        config.addAllowedMethod( HttpMethod.GET);
-        config.addAllowedMethod( HttpMethod.PUT);
-        config.addAllowedMethod( HttpMethod.POST);
-        config.addAllowedMethod( HttpMethod.OPTIONS);
-        config.addAllowedMethod(HttpMethod.DELETE);
         source.registerCorsConfiguration("/**", config);
         return source;
     }
