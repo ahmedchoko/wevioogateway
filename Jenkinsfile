@@ -1,2 +1,2 @@
 @Library('shared_stages')_
-welcomeJob 'sudo mvn clean package deploy:deploy-file -DgroupId=com.wevioo -DartifactId=wevioopfe -Dversion=0.0.1-SNAPSHOT -DgeneratePom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://192.168.0.10:8081/repository/maven-snapshots/ -Dfile=target/wevioopfe-0.0.1-SNAPSHOT.jar'
+welcomeJob 'mvn clean package deploy:deploy-file -DgroupId=com.wevioo -DartifactId=wevioopfe -Dversion=0.0.1-SNAPSHOT -DgeneratePom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://192.168.0.10:8081/repository/maven-snapshots/ -Dfile=target/wevioopfe-0.0.1-SNAPSHOT.jar'
